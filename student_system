@@ -1,0 +1,25 @@
+students = []
+while True:
+    print("==Student Management System==")
+    print("1. Add Student")
+    print("2. View Students")
+    print("3. Search Student")
+    print("4. Show Topper")
+    print("5. Exit")
+    a = int(input("Enter your choice: "))
+    
+    if a == 1:
+        name = input("Enter student name: ")
+        marks = []
+        for i in range(5):
+            mark = int(input("Enter marks for subject {}: ".format(i + 1)))
+            marks.append(mark)
+        student = {"name": name, "marks": marks}
+        students.append(student)
+        print("Student added successfully!")
+    elif a == 2:
+        if not students:
+            print("No students found.")
+        else:
+            for student in students:
+                print(f"Name: {student['name']}, Marks: {student['marks']}")    
