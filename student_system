@@ -26,14 +26,14 @@ while True:
 
     elif a == 3:
         b = input("Enter student name to search: ")
-        found = False
+        f = False
         for student in students:
             if student["name"] == b:
                 print(f"student found: Name: {student['name']}, Marks: {student['marks']}")
-                found = True
+                f = True
                 break
-            else:
-                found = False
+            if not found:
+                
                 print("student not found")
     elif(a==4):
         if not students:
