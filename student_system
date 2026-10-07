@@ -36,20 +36,17 @@ while True:
                 found = False
                 print("student not found")
     elif(a==4):
-        def average(marks):
-            return sum(marks) / len(marks)
-        x=average(marks)
-
-        def topper(marks):
-            top_student == None
-            top_average ==  0
+        if not students:
+            print("No students found.")     
+        else:
+            top_student = None
+            top_average = 0
             for student in students:
-                avg = average(student["marks"])
-                if avg > top_average:
-                    top_average == avg
-                    top_student = "student"
-
-        print(f"Topper is {top_student} with average marks of {top_average}")    
+                average = sum(student["marks"]) / len(student["marks"])
+                if average > top_average:
+                    top_average = average
+                    top_student = student["name"]
+            print(f"Topper is {top_student} with average marks of {top_average}")    
     elif(a==5) :
         print("Exiting the program.")
         break
