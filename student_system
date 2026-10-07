@@ -23,3 +23,35 @@ while True:
         else:
             for student in students:
                 print(f"Name: {student['name']}, Marks: {student['marks']}")    
+
+    elif a == 3:
+        b = input("Enter student name to search: ")
+        found = False
+        for student in students:
+            if student["name"] == b:
+                print(f"student found: Name: {student['name']}, Marks: {student['marks']}")
+                found = True
+                break
+            else:
+                found = False
+                print("student not found")
+    elif(a==4):
+        def average(marks):
+            return sum(marks) / len(marks)
+        x=average(marks)
+
+        def topper(marks):
+            top_student == None
+            top_average ==  0
+            for student in students:
+                avg = average(student["marks"])
+                if avg > top_average:
+                    top_average == avg
+                    top_student = "student"
+
+        print(f"Topper is {top_student} with average marks of {top_average}")    
+    elif(a==5) :
+        print("Exiting the program.")
+        break
+    else:
+        print("Enter a valid number")                             
